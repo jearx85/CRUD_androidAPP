@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:padding="25dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/usuario"
+        android:layout_gravity="center"
+        android:contentDescription="@string/imageuser" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/iniciarsesion"/>
+
+
+    <EditText
+        android:id="@+id/txtUser"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Nombre de usuario"
+        android:textColorHint="#757575"
+        tools:ignore="TextContrastCheck" />
+
+
+    <EditText
+        android:id="@+id/txtClave"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginBottom="12dp"
+        android:hint="@string/passwordUser"
+        android:inputType="textPassword"
+        android:textColorHint="#757575"
+        app:passwordToggleEnabled="true"
+        tools:ignore="TextContrastCheck" />
+
+
+       <TextView
+           android:id="@+id/olvidasteContra"
+           android:layout_width="250dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="end"
+           android:clickable="true"
+           android:focusable="true"
+           android:minHeight="48dp"
+           android:text="@string/olvidaste_tu_contrase_a"
+           android:textAlignment="textEnd"
+           android:textColor="#A1887F"
+           android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#2596be"
+        android:onClick="login"
+        android:text="@string/inicioBtn"
+        android:textColor="#212121"
+        tools:ignore="TextContrastCheck" />
+
+       <Button
+           android:id="@+id/registroNewBtn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:backgroundTint="#2596be"
+           android:minHeight="48dp"
+           android:text="@string/eres_nuevo_registrate"
+           android:textAlignment="center"
+           android:textColor="#212121"
+           android:textSize="15sp"
+           android:textStyle="bold" />
+   </LinearLayout>
+

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:id="@+id/singUpImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="9dp"
+        android:contentDescription="@string/newUserimg"
+        android:src="@drawable/newuserimg"
+        android:transitionName="logoImageTrans"
+        app:layout_constraintBottom_toTopOf="@+id/bienvenidoLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/bienvenidoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="240dp"
+        android:text="@string/bienvenido"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:transitionName="textTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singUpImageView" />
+
+    <TextView
+        android:id="@+id/continuarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="152dp"
+        android:text="@string/registrate_para_empezar"
+        android:textSize="20sp"
+        android:transitionName="iniciaSesionTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenidoLabel" />
+
+    <EditText
+        android:id="@+id/docTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/numero_de_documento1"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="#616161"
+        android:transitionName="emailTransition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continuarLabel"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:hint="@string/nombre_de_usuario"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:orientation="vertical"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docTxt" />
+
+    <EditText
+        android:id="@+id/contrasenaTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:autofillHints=""
+        android:hint="@string/password1"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#616161"
+        android:transitionName="passTransition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+        app:passwordToggleEnabled="true"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/confirmTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:autofillHints=""
+        android:hint="@string/confirmar_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaTxt"
+        app:passwordToggleEnabled="true"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#2596be"
+        android:text="@string/registrar"
+        android:textColor="#212121"
+        android:transitionName="buttonTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTxt"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/consultarbutton"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#2596be"
+        android:onClick="Consultar"
+        android:text="@string/consultar"
+        android:textColor="#212121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTxt"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/eliminarbutton"
+        android:layout_width="139dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2596be"
+        android:onClick="Eliminar"
+        android:text="@string/eliminar"
+        android:textColor="#212121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consultarbutton"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/updatebutton"
+        android:layout_width="138dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#2596be"
+        android:onClick="Actualizar"
+        android:text="@string/actualizar"
+        android:textColor="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regBtn"
+        tools:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
