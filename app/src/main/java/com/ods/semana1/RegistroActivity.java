@@ -62,6 +62,8 @@ public class RegistroActivity extends AppCompatActivity {
                     documento.setError("Documento muy corto");
                 }else if(nom.length() <= 4){
                     nombre.setError("nombre muy corto");
+                }else if(pas.length() <= 4){
+                    clave.setError("contraseña muy corta");
                 }else if (!nom.isEmpty() && !doc.isEmpty() && !pas.isEmpty() && !conf.isEmpty() && pas.equals(conf) && conf.equals(pas)) {
                     Usuario user = new Usuario(nom, doc, pas, conf);
                     user.save();

@@ -45,25 +45,29 @@ public class LoginActivity extends AppCompatActivity {
             clave.setError("campo password vacio");
             return;
         }
+        try {
+            List<Usuario> nameuser = Usuario.findWithQuery(Usuario.class, "Select * from Usuario where nombre = ?", usu);
+            Usuario user = nameuser.get(0);
+            String name = user.getNombre();
+            String passw = user.getPassword();
 
-        List<Usuario> nameuser = Usuario.findWithQuery(Usuario.class, "Select * from Usuario where nombre = ?", usu);
-        Usuario user = nameuser.get(0);
-        String name = user.getNombre();
-        String passw = user.getPassword();
-        if(nameuser.size() < 0){
-            Toast.makeText(getApplicationContext(), "El usuario no existe", Toast.LENGTH_LONG).show();
-        }
-
-
-        if (name.equals(usu) && passw.equals(pass)) {
-            Intent i = new Intent(LoginActivity.this, Inicio.class);
-            i.putExtra("usuario", usu);
-            i.putExtra("clave", pass);
-            startActivity(i);
+            if (name.equals(usu) && passw.equals(pass)) {
+                Intent i = new Intent(LoginActivity.this, Inicio.class);
+                i.putExtra("usuario", usu);
+                i.putExtra("clave", pass);
+                startActivity(i);
+                limpiar();
+            } else {
+                Toast.makeText(getApplicationContext(), "usuario o contraseña invalido", Toast.LENGTH_LONG).show();
+            }
+        }catch(Exception e){
+            e.getMessage();
+            Toast.makeText(getApplicationContext(), "Usuario ingresado no existe", Toast.LENGTH_LONG).show();
             limpiar();
-        } else {
-            Toast.makeText(getApplicationContext(), "usuario o contraseña invalido", Toast.LENGTH_LONG).show();
         }
+
+
+
     }
 
     public void limpiar(){
