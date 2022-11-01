@@ -60,6 +60,8 @@ public class RegistroActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "La contraseña no coincide", Toast.LENGTH_LONG).show();
                 }else if(doc.length() <= 5){
                     documento.setError("Documento muy corto");
+                }else if(nom.length() <= 4){
+                    nombre.setError("nombre muy corto");
                 }else if (!nom.isEmpty() && !doc.isEmpty() && !pas.isEmpty() && !conf.isEmpty() && pas.equals(conf) && conf.equals(pas)) {
                     Usuario user = new Usuario(nom, doc, pas, conf);
                     user.save();
