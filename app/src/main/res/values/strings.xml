@@ -35,4 +35,5 @@
     <string name="eliminar">Eliminar</string>
     <string name="numero_de_documento1">numero de documento</string>
     <string name="actualizar">Actualizar</string>
+    <string name="consultar_datos">Consultar datos</string>
 </resources>

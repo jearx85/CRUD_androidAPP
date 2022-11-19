@@ -121,61 +121,18 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/regBtn"
-        android:layout_width="138dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="#2596be"
-        android:text="@string/registrar"
-        android:textColor="#212121"
-        android:transitionName="buttonTrans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmTxt"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/consultarbutton"
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#2596be"
-        android:onClick="Consultar"
-        android:text="@string/consultar"
-        android:textColor="#212121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmTxt"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/eliminarbutton"
-        android:layout_width="139dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#2596be"
-        android:onClick="Eliminar"
-        android:text="@string/eliminar"
-        android:textColor="#212121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consultarbutton"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/updatebutton"
-        android:layout_width="138dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="#2596be"
-        android:onClick="Actualizar"
-        android:text="@string/actualizar"
-        android:textColor="#212121"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regBtn"
-        tools:ignore="TextContrastCheck" />
-
+            android:id="@+id/regBtn"
+            android:layout_width="378dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#2596be"
+            android:text="@string/registrar"
+            android:textColor="#212121"
+            android:transitionName="buttonTrans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmTxt"
+            tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
